@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- "screen_movie_information".xml -->
+
+<mapper namespace="screenMovieInfo">
+	<select id="list"
+		resultType="kr.co.fmos.screenMovieInfo.ScreenMovieInfoDTO">
+		SELECT movie_information_id,
+		screen_id, movie_id, branch_id,
+		movie_showing_date,
+		movie_showing_time
+		FROM
+		screen_movie_information
+	</select>
+
+	<select id="selectScreenMovieInfoById" parameterType="String"
+		resultType="kr.co.fmos.screenMovieInfo.ScreenMovieInfoDTO">
+		SELECT movie_information_id,
+		screen_id, movie_id, branch_id,
+		movie_showing_date,
+		movie_showing_time
+		FROM
+		screen_movie_information
+		WHERE
+		movie_information_id=#{screenMovieInfoID}
+	</select>
+
+	<select id="showingTime" parameterType="java.util.Map"
+		resultType="java.util.Map">
+		SELECT
+		smi.movie_information_id,
+		smi.movie_showing_time,
+		s.screen_location,
+		s.screen_row,
+		s.screen_line,
+		COALESCE((
+		SELECT
+		SUM(p.adult + p.student + p.silver)
+		FROM payment p
+		WHERE
+		smi.movie_information_id = p.movie_information_id
+		), 0) AS
+		payment_count,
+		COALESCE((
+		SELECT COUNT(none_exist_seats_id)
+		FROM
+		none_exist_seats ns
+		WHERE smi.screen_id = ns.screen_id
+		), 0) AS
+		none_exist_seats_count
+		FROM
+		screen_movie_information smi
+		JOIN screen s ON
+		smi.screen_id = s.screen_id
+		WHERE
+		s.branch_id = #{branchID}
+		AND
+		smi.movie_id = #{movieID}
+		AND smi.movie_showing_date = #{showingDate}
+		ORDER BY
+		smi.movie_showing_time ASC
+	</select>
+
+	<select id="detail" resultType="java.util.Map"
+		parameterType="String">
+		SELECT
+		m.movie_id,
+		s.screen_id,
+		tb.branch_id,
+		tb.branch_name,
+		s.screen_location,
+		s.screen_row,
+		s.screen_line,
+		smi.movie_information_id,
+		m.movie_name,
+		m.movie_image,
+		DATE_FORMAT(smi.movie_showing_date, '%y.%m.%d') AS formatted_date,
+		CASE DATE_FORMAT(smi.movie_showing_date, '%a')
+		WHEN 'Mon' THEN '월'
+		WHEN
+		'Tue' THEN '화'
+		WHEN 'Wed' THEN '수'
+		WHEN 'Thu' THEN '목'
+		WHEN 'Fri' THEN
+		'금'
+		WHEN 'Sat' THEN '토'
+		WHEN 'Sun' THEN '일'
+		ELSE
+		DATE_FORMAT(smi.movie_showing_date, '%a') -- 다른 경우는 그대로 출력
+		END AS
+		korean_day,
+		TIME_FORMAT(smi.movie_showing_time, '%H:%i') AS
+		formatted_time,
+		TIME_FORMAT(
+		ADDTIME(STR_TO_DATE(smi.movie_showing_time, '%H:%i'),
+		SEC_TO_TIME(movie_running_time * 60)),
+		'%H:%i'
+		) AS result_time,
+		m.movie_audience_rating
+		FROM
+		screen_movie_information smi
+		JOIN
+		movie m ON
+		m.movie_id = smi.movie_id
+		JOIN
+		screen s ON s.screen_id = smi.screen_id
+		JOIN
+		theater_branch tb ON tb.branch_id = smi.branch_id
+		WHERE
+		smi.movie_information_id = #{screenMovieInfoID}
+	</select>
+
+	<select id="emptySeats" resultType="java.util.Map"
+		parameterType="String">
+		SELECT es.screen_row row, es.screen_line col
+		FROM
+		screen_movie_information AS smi
+		JOIN none_exist_seats AS es ON
+		smi.screen_id
+		= es.screen_id
+		WHERE smi.movie_information_id =
+		#{screenMovieInfoID}
+	</select>
+
+	<select id="paymentSeats" resultType="java.util.Map"
+		parameterType="String">
+		SELECT
+		ps.seat_x paycol,
+		ps.seat_y payrow
+		FROM
+		screen_movie_information s
+		JOIN
+		payment p ON
+		s.movie_information_id =
+		p.movie_information_id
+		JOIN
+		payment_seat ps ON
+		p.payment_id =
+		ps.payment_id
+		where
+		s.movie_information_id =
+		#{screenMovieInfoID};
+	</select>
+
+	<select id="getTicketingInfo" resultType="java.util.Map"
+		parameterType="String">
+		SELECT
+		m.movie_name,
+		m.movie_audience_rating,
+		m.movie_image,
+		m.movie_running_time,
+		smi.movie_showing_date,
+		TIME_FORMAT(smi.movie_showing_time, '%H:%i') AS movie_showing_time,
+		TIME_FORMAT(ADDTIME(smi.movie_showing_time,
+		SEC_TO_TIME(m.movie_running_time*60)), '%H:%i') AS movie_end_time,
+		tb.branch_name,
+		s.screen_location,
+		CASE
+		WHEN
+		DAYOFWEEK(smi.movie_showing_date) = 1 THEN '일'
+		WHEN
+		DAYOFWEEK(smi.movie_showing_date) = 2 THEN '월'
+		WHEN
+		DAYOFWEEK(smi.movie_showing_date) = 3 THEN '화'
+		WHEN
+		DAYOFWEEK(smi.movie_showing_date) = 4 THEN '수'
+		WHEN
+		DAYOFWEEK(smi.movie_showing_date) = 5 THEN '목'
+		WHEN
+		DAYOFWEEK(smi.movie_showing_date) = 6 THEN '금'
+		WHEN
+		DAYOFWEEK(smi.movie_showing_date) = 7 THEN '토'
+		END AS day_of_week
+		FROM
+		screen_movie_information smi
+		JOIN
+		movie m ON smi.movie_id = m.movie_id
+		JOIN
+		theater_branch tb ON smi.branch_id = tb.branch_id
+		JOIN
+		screen s ON
+		smi.screen_id = s.screen_id
+		WHERE
+		smi.movie_information_id=#{screenMovieInfoID}
+	</select>
+</mapper>
