@@ -31,6 +31,7 @@ import kr.co.fmos.paymentSeat.PaymentSeatDAO;
 import kr.co.fmos.paymentSeat.PaymentSeatDTO;
 import kr.co.fmos.point.PointDAO;
 import kr.co.fmos.region.RegionDAO;
+import kr.co.fmos.reservation.ReservationDAO;
 import kr.co.fmos.screen.ScreenDAO;
 import kr.co.fmos.screen.ScreenDTO;
 import kr.co.fmos.screenMovieInfo.ScreenMovieInfoDAO;
@@ -63,6 +64,7 @@ public class TicketingCont {
 	private final MemberDAO memberDao;
 	private final PaymentSeatDAO paymentSeatDao;
 	private final PointService pointService;
+	private final ReservationDAO reservationDao;
 
 	@GetMapping("/schedule")
 	public ModelAndView schedule() {
@@ -90,6 +92,9 @@ public class TicketingCont {
 			@RequestParam String selectedSeats, @RequestParam int adult, @RequestParam int student,
 			@RequestParam int silver) {
 		ModelAndView mav = new ModelAndView();
+		//선택좌석 상태변경
+		
+		
 		// 현재 로그인된 세션ID
 		String sessionID = (String) session.getAttribute("s_id").toString();
 
@@ -153,7 +158,7 @@ public class TicketingCont {
 		paymentDto.setPrice(price);
 		paymentDto.setPay_discount(payDiscount);
 		paymentDto.setRefund(1);
-		PaymentDTO inputPaymentDto = paymentDao.insertAndReturnWithId(paymentDto);
+		PaymentDTO inputPaymentDto = reservationDao.insertPaymentAndReturnWithId(paymentDto);
 
 		// 정보 불러오기
 		ScreenMovieInfoDTO screenMovieInfo = screenMovieInfoDao.selectScreenMovieInfoById(screenMovieInfoID);
@@ -169,7 +174,7 @@ public class TicketingCont {
 			paymentSeatDto.setPayment_id(payment_id);
 			paymentSeatDto.setSeat_x(Integer.parseInt(seat.substring(1)));
 			paymentSeatDto.setSeat_y(seat.charAt(0) - 64);
-			paymentSeatDao.insert(paymentSeatDto);
+			reservationDao.insertPaymentSeat(paymentSeatDto);
 		}
 
 		mav.addObject("memberName", member.getMember_name());
