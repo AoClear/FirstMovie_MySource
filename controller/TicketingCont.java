@@ -21,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import jakarta.servlet.http.HttpSession;
 import kr.co.fmos.coupon.UserHavingCouponDAO;
 import kr.co.fmos.dto.PointResponseDTO;
+import kr.co.fmos.dto.UserHavingCouponResponseDTO;
 import kr.co.fmos.member.MemberDAO;
 import kr.co.fmos.member.MemberDTO;
 import kr.co.fmos.movie.MovieDAO;
@@ -41,6 +42,7 @@ import kr.co.fmos.service.PointService;
 import kr.co.fmos.service.RegionService;
 import kr.co.fmos.service.ScreenMovieInfoService;
 import kr.co.fmos.service.TheaterBranchService;
+import kr.co.fmos.service.UserHavingCouponService;
 import kr.co.fmos.theaterBranch.TheaterBranchDAO;
 import kr.co.fmos.theaterBranch.TheaterBranchDTO;
 import lombok.RequiredArgsConstructor;
@@ -59,6 +61,7 @@ public class TicketingCont {
 	private final ScreenMovieInfoDAO screenMovieInfoDao;
 	private final ScreenMovieInfoService screenMovieInfoService;
 	private final UserHavingCouponDAO userHavingCouponDao;
+	private final UserHavingCouponService userHavingCouponService;
 	private final PaymentDAO paymentDao;
 	private final ScreenDAO screenDao;
 	private final MemberDAO memberDao;
@@ -92,14 +95,9 @@ public class TicketingCont {
 			@RequestParam String selectedSeats, @RequestParam int adult, @RequestParam int student,
 			@RequestParam int silver) {
 		ModelAndView mav = new ModelAndView();
-		//선택좌석 상태변경
-		
 		
 		// 현재 로그인된 세션ID
 		String sessionID = (String) session.getAttribute("s_id").toString();
-
-		// 사용자 보유쿠폰
-		List<Map<String, Object>> userHavingCouponWithName = userHavingCouponDao.getUserHavingCoupon(sessionID);
 
 		// 예매 정보
 		Map<String, Object> ticketingInfo = screenMovieInfoDao.getTicketingInfo(screenMovieInfoID);
@@ -134,7 +132,7 @@ public class TicketingCont {
 		mav.addObject("adult", adult);
 		mav.addObject("student", student);
 		mav.addObject("silver", silver);
-		mav.addObject("userHavingCouponList", userHavingCouponWithName);
+		mav.addObject("userHavingCouponList", userHavingCouponService.getUserHavingCouponByMemberId(sessionID));
 		mav.addObject("point", pointService.getTotalPointByMemberId(sessionID));
 		mav.addObject("price", price);
 		return mav;
