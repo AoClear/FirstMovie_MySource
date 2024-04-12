@@ -25,19 +25,17 @@
 <br>
 개발 프레임 워크: 
 <img src="https://img.shields.io/badge/SpringBoot-3.1.1-6DB33F?style=flate&logo=SpringBoot&logoColor=6DB33F">
-<img src="https://img.shields.io/badge/Springsecurity-6-FFFFFF?style=flate&logo=springsecurity&logoColor=6DB33F">
 <br>
 빌드 : 
-<img src="https://img.shields.io/badge/Gradle-8.1.1-02303A?style=flate&logo=gradle&logoColor=white">
+<img src="https://img.shields.io/badge/maven-4.0.0-FFFFFF?style=flate&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAzFBMVEVHcExwLIZpK4PIIDjJIDfXQS85KGyRHVP1lSKPL27odCbJIjflbSiZI2S5IEeGJnWpIFewIE6rIFWrIFMqJmPQNDPEIDvKJDfLIDb0kSPFIDvxjCPeWSvFIDvJIDe/IEDfWSvfWyvXQC+0IEx+KHyFJnaDJneBJ3m8IETOKTTjainoeSf0lSPndCfLIDbeWCzjaSl+KHuKJXN6KX27IER/KHu2IEmbImWGJnV/KHvKIDazIEy/IEDOJjTaSy7hYCrqeyaJJXPpeCbdVSxkhj7EAAAAOnRSTlMANkom8usWBP0MG8P5Ht7M96m24UdcpDeviP5xPpjl+NzOwUgkqbfgk/Jx5ufdiKnelGOdyo72UWrsTLVmUAAAANZJREFUKJF90VeTgjAUhuGAwQRFql13FcGuW3TXkgSw/P//5Dhe+oVzmWfeM5mEkLfpcV57P33NgHPe09jwsuF8gK3246wvN83a7yJ2nC22Vh6Pi2IFjVnWJL/HNsSvbGLl1hBahdJ6li07ED9E/VOILkPWobQrBK3gUD3DNgxtd9RW/X4Lhol0/5Qa4a2BDA5SLaCxKAqldBsQG34YST+Blp6uoR8c8cux2dzzpjtoxP6fna9TbMTw9vNffBvCbDPVZM+1pt6IYZSgWdUba5aE1VJEv/gAhbgShVrVkEQAAAAASUVORK5CYII=&logoColor=white">
 <br>
 API, 라이브러리 : 
-<img src="https://img.shields.io/badge/RESTful API (JSON)-000000?style=flate&logo=json&logoColor=white">
+<img src="https://img.shields.io/badge/JSTL-000000?style=flate&logoColor=white">
+<img src="https://img.shields.io/badge/JDBC-000000?style=flate&logoColor=white">
 <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=flate&logo=&logoColor=6DB33F">
 <br>
 데이터베이스 : 
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" >
-<img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white">
-<img src="https://img.shields.io/badge/H2-1828f9?style=flate&logoColor=white">
 <br>
 배포 :
 <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white">
@@ -51,13 +49,6 @@ API, 라이브러리 :
 <br>
 협업 : <img src="https://img.shields.io/badge/GitHub-000000?style=flate&logo=GitHub&logoColor=white">
 <img src="https://img.shields.io/badge/Notion -000000?style=flate&logo=Notion&logoColor=white">
-<img src="https://img.shields.io/badge/Postman-FFFFFF?style=flate&logo=postman&logoColor=postman">
-<img src="https://img.shields.io/badge/Jira Software-0052CC?style=flat&logo=jirasoftware&logoColor=white"/>
-<img src="https://img.shields.io/badge/Google Drive-FFFFFF?style=flat&logo=googledrive&logoColor=4285F4"/>
-<br>
-도구 :
-<img src="https://img.shields.io/badge/Swagger-3.0-85EA2D?style=flat&logo=swagger&logoColor=85EA2D">
-<img src="https://img.shields.io/badge/Jacoco-0.8.9-EE3322?style=flat&logo=&logoColor=EE3322">
 <br>
 
 ---
