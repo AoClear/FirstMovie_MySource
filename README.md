@@ -49,14 +49,14 @@ API, 라이브러리 :
 
 
 
-### 🏚️ 아키텍쳐 구성도
+### 아키텍쳐 구성도
 <img src="docs/architecture-ver2.png" alt="Architecture Diagram"/>
 
 ### ER 다이어그램
 https://www.erdcloud.com/d/oFkZSdvAApwxdaaND
 <img src="docs/er-diagram.png" alt="ER-Diagram"/>
 
-### 🌊 플로우 차트
+### 플로우 차트
 <img src="docs/flow-chart-ver1.png" alt="Flowchart"/>
 
 
@@ -77,16 +77,3 @@ https://www.erdcloud.com/d/oFkZSdvAApwxdaaND
 - 판매글 작성자는 판매글의 주문을 조회/상태 변경을 할 수 있다.
 
 ---
-
-<!--
-### 🔼 버전 정보
-
-#### 1️⃣ Ver 1.0 (24/xx/xx)
-- 
--
-
-#### 2️⃣ Ver 1.1 (24/xx/xx)
-- 
--
-
--->
