@@ -34,6 +34,7 @@ API, 라이브러리 :
 <img src="https://img.shields.io/badge/JDBC-000000?style=flate&logoColor=white">
 <img src="https://img.shields.io/badge/jQuery-0769AD?style=flate&logo=jQuery&logoColor=white">
 <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=flate&logo=&logoColor=6DB33F">
+<img src="https://img.shields.io/badge/PortOne-000000?style=flate&logoColor=white">
 <br>
 데이터베이스 : 
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" >
