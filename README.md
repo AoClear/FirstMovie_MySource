@@ -32,6 +32,7 @@
 API, 라이브러리 : 
 <img src="https://img.shields.io/badge/JSTL-000000?style=flate&logoColor=white">
 <img src="https://img.shields.io/badge/JDBC-000000?style=flate&logoColor=white">
+<img src="https://img.shields.io/badge/jQuery-0769AD?style=flate&logo=jQuery&logoColor=white">
 <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=flate&logo=&logoColor=6DB33F">
 <br>
 데이터베이스 : 
@@ -46,13 +47,13 @@ API, 라이브러리 :
 
 ---
 
+
+
 ### 🏚️ 아키텍쳐 구성도
 <img src="docs/architecture-ver2.png" alt="Architecture Diagram"/>
 
-<!--
 ### ER 다이어그램
-<img src="docs/er-diagram-ver2.png" alt="ER-Diagram"/>
--->
+<img src="docs/er-diagram.png" alt="ER-Diagram"/>
 
 ### 🌊 플로우 차트
 <img src="docs/flow-chart-ver1.png" alt="Flowchart"/>
