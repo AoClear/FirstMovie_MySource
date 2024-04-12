@@ -53,6 +53,7 @@ API, 라이브러리 :
 <img src="docs/architecture-ver2.png" alt="Architecture Diagram"/>
 
 ### ER 다이어그램
+https://www.erdcloud.com/d/oFkZSdvAApwxdaaND
 <img src="docs/er-diagram.png" alt="ER-Diagram"/>
 
 ### 🌊 플로우 차트
