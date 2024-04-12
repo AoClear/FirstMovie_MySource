@@ -38,14 +38,7 @@ API, 라이브러리 :
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" >
 <br>
 배포 :
-<img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white">
-<img src="https://img.shields.io/badge/EC2-FF9900?style=flat&logo=amazonec2&logoColor=white">
-<img src="https://img.shields.io/badge/RDS-527FFF?style=flat&logo=amazonrds&logoColor=white">
-<img src="https://img.shields.io/badge/S3-569A31?style=flat&logo=amazons3&logoColor=white">
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white">
-<img src="https://img.shields.io/badge/NGINX-009639?style=flat&logo=nginx&logoColor=white">
-<img src="https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=jenkins&logoColor=white">
-<img src="https://img.shields.io/badge/Portainer-13BEF9?style=flat&logo=portainer&logoColor=white">
+<img src="https://img.shields.io/badge/Cafe24-2952B8?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAhFBMVEVHcEy/zdQ2ev+5x8++y9O+y9PF0dk2iP8siP8cXf88e/80hP8zhv+7ydHV3+bU3+VinPrH09ozif+8ytKtweYsZv8+hf+0w8y6x87D0Na+y9I/gv/W4OXL1t0hiP/R3OIVif88dP8Dhf8uaf9+pu2uwtagt+oCTf9Zlva6yt6auN2DruKDqNXsAAAAF3RSTlMAeyabIbhf/v7953rT4dfwDOhGPeqlm0XfOrQAAAFZSURBVDiNfZPpYoMgEITFC0yqNk1bQQRvo+b936+7mIMY7fx0PmeXZXEcWz4JkrRMkyD0nQ2FJ1UaFaAkXNtnoUCluhNF8priqUXGvyF2SCAUJpTT0HXdoIpFxPIF+oOM2iiKLpd6QD/9vPvE+JNs67oFGUQV6fN0AjWAjTIEIN9WAzn6tZQ2EVnjyfNcTNLo6MIH96e1fcdDYET7cO/KPdgjQL/X6G/NFypwIDpGpXS3gZADQRmlH9u+QxCoADjuAB7nvG8Yo1//ApqxPYBkQDRas70SYQaErrTea9JHYGyA2DmmkwExN1Wl2V6XGEGBqB5F3JdyPkb0DWboI96G+7sae4DEdSEYO1AqVxeDERZBF8JaGBjF0uiTYOMkTqsi0Om1Whg9zriEbwQg/RXWfu6FwC0UxCK8G8Hxbo2EeH1952yFxG8POLSJ+O3xmvOSIM54Fgfk8fcf/3owGNf2d+gAAAAASUVORK5CYII=&logoColor=white">
 <br>
 협업 : <img src="https://img.shields.io/badge/GitHub-000000?style=flate&logo=GitHub&logoColor=white">
 <img src="https://img.shields.io/badge/Notion -000000?style=flate&logo=Notion&logoColor=white">
