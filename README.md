@@ -49,7 +49,7 @@ API, 라이브러리 :
 ---
 
 ### 아키텍쳐 구성도
-<img src="docs/architecture-ver2.png" alt="Architecture Diagram"/>
+<img src="docs/architecture.png" alt="Architecture Diagram"/>
 
 ### ER 다이어그램
 https://www.erdcloud.com/d/oFkZSdvAApwxdaaND
