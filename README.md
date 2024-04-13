@@ -24,7 +24,7 @@
 <img src="https://img.shields.io/badge/JAVA-17-FFFFFF?style=flate&logo=openjdk&logoColor=FFFFFF">
 <br>
 개발 프레임 워크: 
-<img src="https://img.shields.io/badge/SpringBoot-3.1.1-6DB33F?style=flate&logo=SpringBoot&logoColor=6DB33F">
+<img src="https://img.shields.io/badge/SpringBoot-3.2.0-6DB33F?style=flate&logo=SpringBoot&logoColor=6DB33F">
 <br>
 빌드 : 
 <img src="https://img.shields.io/badge/maven-4.0.0-FFFFFF?style=flate&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAzFBMVEVHcExwLIZpK4PIIDjJIDfXQS85KGyRHVP1lSKPL27odCbJIjflbSiZI2S5IEeGJnWpIFewIE6rIFWrIFMqJmPQNDPEIDvKJDfLIDb0kSPFIDvxjCPeWSvFIDvJIDe/IEDfWSvfWyvXQC+0IEx+KHyFJnaDJneBJ3m8IETOKTTjainoeSf0lSPndCfLIDbeWCzjaSl+KHuKJXN6KX27IER/KHu2IEmbImWGJnV/KHvKIDazIEy/IEDOJjTaSy7hYCrqeyaJJXPpeCbdVSxkhj7EAAAAOnRSTlMANkom8usWBP0MG8P5Ht7M96m24UdcpDeviP5xPpjl+NzOwUgkqbfgk/Jx5ufdiKnelGOdyo72UWrsTLVmUAAAANZJREFUKJF90VeTgjAUhuGAwQRFql13FcGuW3TXkgSw/P//5Dhe+oVzmWfeM5mEkLfpcV57P33NgHPe09jwsuF8gK3246wvN83a7yJ2nC22Vh6Pi2IFjVnWJL/HNsSvbGLl1hBahdJ6li07ED9E/VOILkPWobQrBK3gUD3DNgxtd9RW/X4Lhol0/5Qa4a2BDA5SLaCxKAqldBsQG34YST+Blp6uoR8c8cux2dzzpjtoxP6fna9TbMTw9vNffBvCbDPVZM+1pt6IYZSgWdUba5aE1VJEv/gAhbgShVrVkEQAAAAASUVORK5CYII=&logoColor=white">
@@ -34,6 +34,7 @@ API, 라이브러리 :
 <img src="https://img.shields.io/badge/JDBC-000000?style=flate&logoColor=white">
 <img src="https://img.shields.io/badge/jQuery-0769AD?style=flate&logo=jQuery&logoColor=white">
 <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=flate&logo=&logoColor=6DB33F">
+<img src="https://img.shields.io/badge/PortOne-000000?style=flate&logoColor=white">
 <br>
 데이터베이스 : 
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" >
@@ -47,18 +48,12 @@ API, 라이브러리 :
 
 ---
 
-
-
-### 🏚️ 아키텍쳐 구성도
+### 아키텍쳐 구성도
 <img src="docs/architecture-ver2.png" alt="Architecture Diagram"/>
 
 ### ER 다이어그램
 https://www.erdcloud.com/d/oFkZSdvAApwxdaaND
 <img src="docs/er-diagram.png" alt="ER-Diagram"/>
-
-### 🌊 플로우 차트
-<img src="docs/flow-chart-ver1.png" alt="Flowchart"/>
-
 
 --- 
 ## ⚒️ 개발 내용
@@ -77,16 +72,3 @@ https://www.erdcloud.com/d/oFkZSdvAApwxdaaND
 - 판매글 작성자는 판매글의 주문을 조회/상태 변경을 할 수 있다.
 
 ---
-
-<!--
-### 🔼 버전 정보
-
-#### 1️⃣ Ver 1.0 (24/xx/xx)
-- 
--
-
-#### 2️⃣ Ver 1.1 (24/xx/xx)
-- 
--
-
--->
